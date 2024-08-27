@@ -5,7 +5,7 @@ app.use(express.json())
 var cors = require('cors')
 app.use(cors())
 
-app.get('/getAllItems', async function (req, res) {
+app.post('/getAllItems', async function (req, res) {
   const result = await readDataFromExcelFile('todolist.xlsx')
   console.log('result : ', result)
   res.send(result)
@@ -40,5 +40,6 @@ app.post('/UpdateTodo',  async function (req, res) {
 
 })
 
+const PORT = process.env.PORT
 
-app.listen(3000)
+app.listen(PORT)

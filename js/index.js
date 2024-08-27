@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         list.innerHTML = "";
 
         console.log('array is:', disp)
-
+        
         printlist(disp);
         localStorage.setItem('todo-list', JSON.stringify(storegee));
     }
